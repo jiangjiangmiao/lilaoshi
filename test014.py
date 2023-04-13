@@ -1,22 +1,17 @@
-# Find the missing letter
-# Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+# Create a function named rotate() that accepts a string argument and returns an array of strings with each letter from the input string being rotated to the end.
 #
-# You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
-# The array will always contain letters in only one case.
-#
-# Example:
-#
-# ['a','b','c','d','f'] -> 'e'
-# ['O','Q','R','S'] -> 'P'
-# (Use the English alphabet with 26 letters!)
-#
-# Have fun coding it and please don't forget to vote and rank this kata! :-)
-#
-# I have also created other katas. Take a look if you enjoyed this kata!
-
-def find_missing_letter(chars):
-    return
+# rotate("Hello") // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
+# Note: The original string should be included in the output array The order matters.
+# Each element of the output array should be the rotated version of the previous element.
+# The output array SHOULD be the same length as the input string The function should return an emptry array with a 0 length string, '', as input
 
 
-print(find_missing_letter(['a', 'b', 'c', 'd', 'f']))
-print(find_missing_letter(['O', 'Q', 'R', 'S']))
+def rotate(str_):
+    # your code here
+    pass
+
+
+print(rotate("Hello"))  # ["elloH", "lloHe", "loHel", "oHell", "Hello"]
+print(rotate(" "))  # " "
+print(rotate(""))  # []
+print(rotate("123"))  # ["231", "312", "123"]

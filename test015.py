@@ -1,22 +1,49 @@
-# Find the missing letter
-# Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
-#
-# You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
-# The array will always contain letters in only one case.
-#
-# Example:
-#
-# ['a','b','c','d','f'] -> 'e'
-# ['O','Q','R','S'] -> 'P'
-# (Use the English alphabet with 26 letters!)
-#
-# Have fun coding it and please don't forget to vote and rank this kata! :-)
-#
-# I have also created other katas. Take a look if you enjoyed this kata!
+# Input: 3 and Output:
+#   *
+#  ***
+# *****
+#  ###
 
-def find_missing_letter(chars):
-    return
+#  Input 9 and Output:
+#     *
+#    ***
+#   *****
+#    ***
+#   *****
+#  *******
+#   *****
+#  *******
+# *********
+#    ###
+
+#  Input 17 and Output:
+#       *
+#      ***
+#     *****
+#      ***
+#     *****
+#    *******
+#     *****
+#    *******
+#   *********
+#    *******
+#   *********
+#  ***********
+#   *********
+#  ***********
+# *************
+#      ###
+
+# You can see, always a root, always steps of hight 3, tree never smaller than 3 (return "") and no difference for input values like 15 or 17 (because (int) 15/3 = (int) 17/3).
+# That's valid for every input and every tree. Lines are delimited by \r\n and no trailing white space allowed.
+# I think there's nothing more to say - perhaps look at the testcases too;-)!
+
+def christmas_tree(height):
+    # Coding a nice christmas tree ^_^
+    pass
 
 
-print(find_missing_letter(['a', 'b', 'c', 'd', 'f']))
-print(find_missing_letter(['O', 'Q', 'R', 'S']))
+print(christmas_tree(5))  # *\r\n ***\r\n*****\r\n ###
+print(christmas_tree(10))  # *\r\n   ***\r\n  *****\r\n   ***\r\n  *****\r\n *******\r\n  *****\r\n *******\r\n*********\r\n   ###
+print(christmas_tree(8))  # *\r\n  ***\r\n *****\r\n  ***\r\n *****\r\n*******\r\n  ###
+print(christmas_tree(2))  #
