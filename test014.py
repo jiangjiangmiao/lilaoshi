@@ -6,12 +6,19 @@
 # The output array SHOULD be the same length as the input string The function should return an emptry array with a 0 length string, '', as input
 
 
-def rotate(str_):
-    # your code here
-    pass
+def rotate(string):
+    new_list = []
+    if len(string) == 0:
+        return []
+    else:
+        for i in range(1, len(string)):
+            new_str = string[i:] + string[:i]
+            new_list.append(new_str)
+        new_list.append(string)
+        return new_list
 
 
 print(rotate("Hello"))  # ["elloH", "lloHe", "loHel", "oHell", "Hello"]
-print(rotate(" "))  # " "
+print(rotate(" "))  # [" "]
 print(rotate(""))  # []
 print(rotate("123"))  # ["231", "312", "123"]
