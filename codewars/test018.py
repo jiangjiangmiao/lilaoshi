@@ -20,7 +20,7 @@ def calc(txt):
     symbol = txt[space + 1]
     left = txt[:space]
     right = txt[space + 3:]
-    if left.count('.') < right.count('.') and symbol == '-' or left.count('.') < right.count('.') and symbol == '/':
+    if (left.count('.') < right.count('.') and symbol == '-') or (left.count('.') < right.count('.') and symbol == '/'):
         return "' '"
     if symbol == "+":
         return (left.count('.') + right.count('.')) * "."
