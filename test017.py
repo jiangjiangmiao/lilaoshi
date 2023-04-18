@@ -8,7 +8,17 @@
 # second_symbol('Hello world!!!', 'A', 1) --> -1
 
 def nth_symbol(s, symbol, n):
-    pass
+    if s.count(symbol) == 0 or s.count(symbol) == 1:
+        return -1
+    if s.count(symbol) >= n:
+        new_s = list(s)
+        for i in range(0, n - 1):
+            new_s.remove(symbol)
+            i += 1
+        first_symbol = new_s.index(symbol)
+        return first_symbol + n - 1
+    else:
+        return -1
 
 
 print(nth_symbol('Hello world!!!', 'l', 2))
