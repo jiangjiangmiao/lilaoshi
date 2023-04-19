@@ -29,8 +29,16 @@
 # 只会存在一个有效答案
 #
 
-def twosum(input):
-    pass
+def twosum(input, target):
+    a = {}
+    j = -1
+    for i in input:
+        j += 1
+        if (target - i) in a:
+            return [a[target - i], j]
+        a[i] = j
+    return [-1, -1]
 
-print(twosum([2,7,11,15], 9)) # 输出：[0,1] 因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
-print(twosum( [3,2,4], 6)) # 输出：[1,2]
+
+print(twosum([2, 7, 11, 15], 9))  # 输出：[0,1] 因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+print(twosum([3, 2, 4], 6))  # 输出：[1,2]
