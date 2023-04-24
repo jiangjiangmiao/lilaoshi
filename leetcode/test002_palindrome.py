@@ -28,14 +28,30 @@
 #
 
 def isPalindrome(x):
-    return False
+    a = list(str(x))
+    b = [x for x in a]
+    a.reverse()
+    return a == b
 
 
 def isPalindrome2(x):
-    # 进阶：你能不将整数转为字符串来解决这个问题吗？
-    return False
+    x = str(x)
+    y = x[::-1]
+    return x == y
 
 
-print(isPalindrome(121))
-print(isPalindrome(-121))
-print(isPalindrome(1234))
+def isPalindrome3(n):
+    if n < 0:
+        return False
+    x = []
+    while n > 0:
+        i = n % 10
+        x.append(i)
+        n = n // 10
+    y = x[::-1]
+    return x == y
+
+
+print(isPalindrome3(121))
+print(isPalindrome3(-121))
+print(isPalindrome3(1234))

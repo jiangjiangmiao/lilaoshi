@@ -20,8 +20,50 @@
 # 输入：s = "(]"
 # 输出：false
 
+
+def valid(s, m, p):
+    i = 0
+    for n in s:
+        if n == m:
+            i += 1
+        else:
+            if n == p:
+                i -= 1
+                if i < 0:
+                    return False
+    return i == 0
+
+
 def isValid(s):
-    return False
+     return valid(s, "(", ")") and valid(s, "[", "]") and valid(s, "{", "}")
+
+    # i = 0
+    # j = 0
+    # k = 0
+    # for n in s:
+    #     if n == "(":
+    #         i += 1
+    #     else:
+    #         if n == ")":
+    #             i -= 1
+    #             if i < 0:
+    #                 return False
+    #     if n == "[":
+    #         j += 1
+    #     else:
+    #         if n == "]":
+    #             j -= 1
+    #             if j < 0:
+    #                 return False
+    #     if n == "{":
+    #         j += 1
+    #     else:
+    #         if n == "}":
+    #             j -= 1
+    #             if j < 0:
+    #                 return False
+    # if i == 0 and j == 0 and k == 0:
+    #     return True
 
 
 print(isValid("()"))

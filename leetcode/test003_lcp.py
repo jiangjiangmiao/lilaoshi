@@ -15,7 +15,26 @@
 # 解释：输入不存在公共前缀。
 
 def lcp(array):
-    return ""
+    len_min = min(array, key=len)
+    y = ''
+    for j in range(0, len(len_min)):
+        x = ''
+        for i in range(0, len(array)):
+            if i == 0:
+                x = array[0][j]
+            elif array[i][j] == x:
+                continue
+            else:
+                return y
+        y += array[0][j]
+    return y
+
+
+# def lcp(array):
+#     len_min = min(array, key=len)
+#     for i in range(0, len(len_min)):
+#         for n in array:
+#             if
 
 
 print(lcp(["flower", "flow", "flight"]))
